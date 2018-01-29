@@ -1,6 +1,7 @@
 package matera.systems.cursoferias2018.api.repository;
 
 import matera.systems.cursoferias2018.api.domain.entity.UsuarioEntity;
+import matera.systems.cursoferias2018.api.domain.request.UsuarioLoginRequest;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,5 +18,7 @@ public interface UsuarioRepository {
     Optional<UsuarioEntity> findByID(UUID uuid);
 
     void atualizar(UsuarioEntity update);
+    
+    Optional<UsuarioEntity> findByNomeESenha(UsuarioLoginRequest login);
 
 }

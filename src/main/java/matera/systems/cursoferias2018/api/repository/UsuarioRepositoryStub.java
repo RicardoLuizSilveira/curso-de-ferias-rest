@@ -1,6 +1,8 @@
 package matera.systems.cursoferias2018.api.repository;
 
 import matera.systems.cursoferias2018.api.domain.entity.UsuarioEntity;
+import matera.systems.cursoferias2018.api.domain.request.UsuarioLoginRequest;
+
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -80,5 +82,11 @@ public class UsuarioRepositoryStub implements UsuarioRepository {
     public void atualizar(UsuarioEntity update) {
         data.put(update.getUuid(), update);
     }
+
+	@Override
+	public Optional<UsuarioEntity> findByNomeESenha(UsuarioLoginRequest login) {
+		//TODO implementar busca por usuario e senha
+		return null;
+	}
 
 }

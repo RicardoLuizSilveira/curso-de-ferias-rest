@@ -6,11 +6,11 @@ public class UsuarioEntity {
 
     private UUID uuid;
     private String nome;
-    private String perfil;
-    private String email;
     private String login;
-    private String senha;
+    private String email;
+    private String perfil;
     private String urlPhoto;
+    private String senha;
 
     public UUID getUuid() {
         return uuid;
