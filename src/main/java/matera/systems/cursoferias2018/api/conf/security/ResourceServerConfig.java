@@ -16,7 +16,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 		
 		http
 			.authorizeRequests()
-			.antMatchers("/health")
+			.antMatchers("/usuarios", "/login")
 			.permitAll()
 			.anyRequest()
 			.authenticated()
